@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Empleado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form-style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-card">
+        <h1 class="form-title">Eliminar empleado</h1>
+
+        <p id="error-msg" class="error-msg" style="display:none;"></p>
+
+        <div class="input-group">
+            <label>ID del empleado</label>
+            <input type="number" id="emp_id" placeholder="Ej: 1">
+            <small>Ingresa el ID del empleado que deseas eliminar.</small>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-primary" id="delete-btn">Eliminar</button>
+            <button class="btn-secondary" onclick="window.location.href='menu.html'">Volver</button>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/delete_emp.js"></script>
+</body>
+</html>

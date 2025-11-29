@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema RH - Menú</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form-style.css"> <!-- Usamos el mismo estilo -->
+    <link rel="stylesheet" href="../css/menu.css"> <!-- Estilos específicos del menú -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/menu.js"></script>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="form-card">
+
+            <h1 class="form-title">Menú Principal</h1>
+
+            <div class="menu-grid">
+
+                <div class="menu-card" onclick="location.href='add_emp.html'">
+                    <h2>Agregar empleados</h2>
+                    <p>Registrar nuevos empleados en la base de datos.</p>
+                </div>
+
+                <div class="menu-card" onclick="location.href='edit_emp.html'">
+                    <h2>Modificar empleados</h2>
+                    <p>Editar información de los empleados existentes.</p>
+                </div>
+
+                <div class="menu-card" onclick="location.href='delete_emp.html'">
+                    <h2>Eliminar empleados</h2>
+                    <p>Remover empleados de la base de datos.</p>
+                </div>
+
+                <div class="menu-card" onclick="location.href='search_emp.html'">
+                    <h2>Buscar empleados</h2>
+                    <p>Buscar empleados por nombre.</p>
+                </div>
+
+            </div>
+
+            <button class="btn-secondary logout-btn" onclick="logout()">Cerrar sesión</button>
+
+        </div>
+    </div>
+
+</body>
+</html>

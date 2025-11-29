@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Empleado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form-style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-card">
+        <h1 class="form-title">Buscar empleado</h1>
+
+        <p id="error-msg" class="error-msg" style="display:none;"></p>
+
+        <div class="input-group">
+            <label>Nombre del empleado</label>
+            <input type="text" id="first_name" placeholder="Ej: Juan">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-primary" id="search-btn">Buscar</button>
+            <button class="btn-secondary" onclick="window.location.href='menu.html'">Volver</button>
+        </div>
+
+        <pre id="result" class="result-box"></pre>
+    </div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/search_emp.js"></script>
+</body>
+</html>

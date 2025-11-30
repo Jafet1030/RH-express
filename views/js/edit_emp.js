@@ -29,7 +29,14 @@ function ocultarMensaje() {
 }
 
 function buscarEmpleado() {
-    const id = document.getElementById('emp_id').value;
+    const id = Number(document.getElementById('employee_id').value);
+    
+    if (!id) {
+        mostrarMensaje("Ingrese un ID de empleado.");
+        return;
+    }
+
+    console.log('Buscando empleado id=', id);
     limpiarFormulario();
     ocultarMensaje();
 
@@ -37,6 +44,7 @@ function buscarEmpleado() {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
     })
     .then(res => {
+        console.log('response buscarEmpleado', res);
         if (res.status === 200 && res.data.data) {
             const emp = res.data.data;
 
@@ -48,7 +56,7 @@ function buscarEmpleado() {
 
             document.getElementById('update-form').style.display = "block";
         } else {
-            mostrarMensaje("Empleado no encontrado.");
+            mostrarMensaje(res.data?.message ||"Empleado no encontrado.");
         }
     })
     .catch(err => {
@@ -58,7 +66,7 @@ function buscarEmpleado() {
 }
 
 function actualizarEmpleado() {
-    const id = document.getElementById('emp_id').value;
+    const id = document.getElementById('employee_id').value;
 
     const data = {
         first_name: document.getElementById('first_name').value,

@@ -5,9 +5,6 @@ function init() {
         window.location.href = 'menu.html';
         return;
     }
-    document.querySelector('#register-btn')
-        .addEventListener('click', () => window.location.href = 'signin.html');
-        
     document.querySelector('#login-btn')
         .addEventListener('click', login);
 }

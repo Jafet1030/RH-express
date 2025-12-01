@@ -48,7 +48,7 @@ function displayEmployees(employees) {
         employeeCard.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
         employeeCard.innerHTML = `
             <div class="employee-info">
-                <p><strong>ID:</strong> ${emp.employee_id || 'N/A'}</p>
+                <p><strong>ID:</strong> ${emp.emp_id || 'N/A'}</p>
                 <p><strong>Nombre:</strong> ${emp.first_name || 'N/A'} ${emp.last_name || 'N/A'}</p>
                 <p><strong>Teléfono:</strong> ${emp.phone}</p>
                 <p><strong>Correo:</strong> ${emp.mail}</p>

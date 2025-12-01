@@ -66,7 +66,7 @@ employee.put('/:id', async (req, res, next) => {
 
     if (first_name && last_name && phone && mail && address) { // pequeña validacion
         let query = `UPDATE employee SET first_name='${first_name}',last_name='${last_name}',`;
-        query += `phone='${phone}',mail='${mail}', address='${address}' WHERE employee_id=${req.params.id};`;
+        query += `phone='${phone}',mail='${mail}', address='${address}' WHERE emp_id=${req.params.id};`;
         const rows = await db.query(query);
 
         if (rows.affectedRows == 1) {

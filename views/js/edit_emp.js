@@ -29,7 +29,7 @@ function ocultarMensaje() {
 }
 
 function buscarEmpleado() {
-    const id = Number(document.getElementById('employee_id').value);
+    const id = Number(document.getElementById('emp_id').value);
     
     if (!id) {
         mostrarMensaje("Ingrese un ID de empleado.");
@@ -66,7 +66,7 @@ function buscarEmpleado() {
 }
 
 function actualizarEmpleado() {
-    const id = document.getElementById('employee_id').value;
+    const id = document.getElementById('emp_id').value;
 
     const data = {
         first_name: document.getElementById('first_name').value,

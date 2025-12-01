@@ -45,7 +45,7 @@ VALUES
 
 -- 4. Create the Employee Table
 CREATE TABLE employee (
-    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     phone VARCHAR(15),

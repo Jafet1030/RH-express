@@ -40,8 +40,8 @@ CREATE TABLE user (
 -- Insert two initial administrator users
 INSERT INTO user (user_name, user_mail, user_password)
 VALUES
-('Rene', 'rene@gmail.com', '2,4,6');
-('Jafert', 'jafert@gmail.com', '123'),
+('Rene', 'rene@gmail.com', '246');
+('Jafet', 'jafet@gmail.com', '123'),
 
 -- 4. Create the Employee Table
 CREATE TABLE employee (
